@@ -16,6 +16,12 @@ public class ProductList {
         return createTablefromlist(productList);
     }
 
+    public Pane getSearchedProducts(String searchprod){
+        ObservableList<Product> productList =   Product.getSearchedProducts(searchprod);
+
+        return createTablefromlist(productList);
+    }
+
 
 
     public Pane createTablefromlist(ObservableList<Product> productList){
@@ -47,6 +53,7 @@ public class ProductList {
     }
 
     public Pane productInCart(ObservableList<Product> productList){
+
         return createTablefromlist(productList);
     }
     public Product getSelectedProduct(){
